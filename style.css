@@ -1,1 +1,61 @@
+/* General Styles */
+body {
+    background-color: #222; /* Dark background */
+    color: #eee; /* Light text color */
+    font-family: 'Roboto', sans-serif; /* Or any clean sans-serif font you prefer */
+    margin: 20px;
+    line-height: 1.6;
+}
 
+h1, h2, h3 {
+    color: #fff; /* White headings */
+}
+
+a {
+    color: #007bff; /* Blue links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Project Card Styles */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-gap: 20px;
+}
+
+.project-card {
+    background-color: #333; /* Slightly lighter dark background for cards */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align:center; /*Center text in the card*/
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.project-card p{
+    color: #eee;
+}
+
+/*Optional: Add a hover effect*/
+.project-card:hover{
+    transform: scale(1.02); /*Slight zoom on hover*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /*Increased shadow on hover*/
+}
+
+/* Footer Styles*/
+footer{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #888; /* Lighter gray for footer text */
+
+}
