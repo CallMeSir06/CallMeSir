@@ -1,18 +1,17 @@
-/* General Styles */
 body {
-    background-color: #222; /* Dark background */
-    color: #eee; /* Light text color */
-    font-family: 'Roboto', sans-serif; /* Or any clean sans-serif font you prefer */
+    background-color: #222;
+    color: #eee;
+    font-family: 'Roboto', sans-serif;
     margin: 20px;
     line-height: 1.6;
 }
 
 h1, h2, h3 {
-    color: #fff; /* White headings */
+    color: #fff;
 }
 
 a {
-    color: #007bff; /* Blue links */
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -20,20 +19,31 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Horizontal scrolling container */
+.project-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
 
 /* Project Card Styles */
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    grid-gap: 20px;
+    display: inline-flex;
+    flex-wrap: nowrap;
 }
 
 .project-card {
-    background-color: #333; /* Slightly lighter dark background for cards */
+    background-color: #333;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    text-align:center; /*Center text in the card*/
+    width: 300px;
+    height: 400px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transitions */
+    transform-origin: center center ;
 }
 
 .project-card h3 {
@@ -41,21 +51,29 @@ a:hover {
     color: #fff;
 }
 
-.project-card p{
+.project-card p {
     color: #eee;
 }
 
-/*Optional: Add a hover effect*/
-.project-card:hover{
-    transform: scale(1.02); /*Slight zoom on hover*/
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /*Increased shadow on hover*/
+.project-card:hover {
+    transform: scale(1.05); /* Increased scale for better visual effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Increased shadow and opacity */
+    cursor: pointer; /* Indicate that the card is clickable */
+    background-color: #444; /*Slightly darken the background on hover*/
+
+
+/*Media Queries for larger screens*/
+@media (min-width: 768px) {
+  .project-card {
+    width: 350px;
+  }
 }
 
-/* Footer Styles*/
-footer{
+
+/* Footer Styles */
+footer {
     margin-top: 40px;
     text-align: center;
     font-size: 0.8em;
-    color: #888; /* Lighter gray for footer text */
-
+    color: #888;
 }
